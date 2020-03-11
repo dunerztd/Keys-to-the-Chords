@@ -223,7 +223,7 @@ def search_keys_by_chord()
 
   chord_select = chord_select.split(" ")
   
-  major_chord_search(chord_select)
+  search_keys_by_chord_print(chord_select)
 
   puts "\n"
   print "Which key would you like to view? "
@@ -250,7 +250,7 @@ def search_keys_by_chord()
   sub_menu()
 end
 
-def major_chord_search(chord_select)
+def search_keys_by_chord_print(chord_select)
 
   found_keys = []
 
