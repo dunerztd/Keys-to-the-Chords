@@ -209,10 +209,23 @@ end
 
 def search_chords
   puts "\n"
-  print 'What chord would you like displayed (only triads (C/Cm) supported)? '
-  answer = gets.chomp
-  puts "\n"
-  p Music::Chord.new(answer).notes.map(&:name)
+  print 'What chord would you like displayed (only triads (C/Cm/C#m) supported)? '
+  user_entry = gets.chomp
+  pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
+  loop_test = true
+
+  while loop_test == true
+    if pattern.match(user_entry)
+      p Music::Chord.new(user_entry).notes.map(&:name)
+      loop_test = false
+    else
+      puts "\n"
+      print 'Incorrect Entry. Enter a valid chord (C/C#/C#m): '
+      user_entry = gets.chomp
+      pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
+      puts "\n"
+    end
+  end
 end
 
 def search_keys_by_chord()
@@ -323,6 +336,15 @@ def search_keys
     end
   end
   puts "\n"
+end
+
+def search_chords_validation
+  # chord length can only be 1, 2 or 3 characters longs. length > 3 'error'
+  # first value A - G: can convert lowercase to uppercase
+  # if second character - only be either '#', 'b', 'm' (letters lowercase)
+  # if third character - will only be a lowercase 'm'
+
+  arr_1 = [A..G]
 end
 
 main_menu()
