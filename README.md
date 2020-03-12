@@ -1,5 +1,8 @@
-source control repository
+# Source Control Repository
+
 https://github.com/dunerztd/Chords_and_Keys
+
+-- screenshot needed ---
 
 # Software Development Plan
 
@@ -17,10 +20,26 @@ If a songwriter comes up with a piece based on a couple of chords, it will allow
 
 There are three main features to this terminal application.
 
-The first feature of the terminal application is the ability to search musical keys by chord or chords contained in the keys. The code contains a long list of major and minor keys. When the user types in chords ie 'C' and 'G', the database is searched for any keys containing those chords. A list of keys are displayed, in this instance 'C Major', 'G Major', 'E Minor' and 'A Minor'. The user then can select any of these keys and a list of all the chords corresponding to that selected key are displayed. For further information about this key, the user can select any of the chords listed to find out which notes make up that chord. With the help of a sub menu, its easy to navigate between the listed key and displaying the contents of the keys chords.
+The first feature of the terminal application is the ability to search musical keys by a chord or chords contained in the keys. The code contains a long list of major and minor keys. When the user types in chords ie 'C' and 'G', the database is searched for any keys containing those chords. A list of keys are displayed, in this instance 'C Major', 'G Major', 'E Minor' and 'A Minor'. The user then can select any of these keys and a list of all the chords corresponding to that selected key are displayed. For further information about this key, the user can select any of the chords listed to find out which notes make up that chord. With the help of a sub menu, its easy to navigate between the found key and its accompanying chords.
 
+The second feature is the ability to directly search for a key. From the main menu, the user can navigate to the search for a key item. Type in any major or minor key and all the chords associated with the key will be displayed. Similar to the first feature, a sub menu is displayed and the user can type in a chord to find the notes contained within said chord. From here it is simple to navigate back to the main menu.
 
+The third feature is the ability to directly search for chords. From the main menu, the user can navigate to the search for a chord item. Any major or minor triad chord chord can be searched for. Simply typing in a ie. C, D#, Am will display the individual notes which make up the chord. The main menu will be displayed again to start the process over.
 
-- Displaying directly any key in the list of major or minor keys
-- Displaying directly any tried chord ie. C, D#, Am
-- Easy navigation between found keys and chords.
+## User Interaction and Experience
+
+On start up, the user will be prompted with a menu containing four items. These include: 1. Search for keys by chords, 2. Search Keys, 3. Search chord and 4. Exit. Unless 1, 2, 3 or 4 is entered, an error is displayed until the correct is given.
+
+Typing '1' to select the 'Search key by chord' feature, the user will be prompted to enter chords(s) with an input example given. If the wrong input is given, an error will be continued to be displayed until the correct input is received.
+The list of found keys is displayed and the user is prompted for their input. Unless the key is entered exactly as display it will through an error until correct. A list of chords contained in the key are displayed.
+A sub menu is displayed and the user can select: 1. Select a chord, 2. Go Back or 3. Main Menu. The second option takes the user back the 'Search key by chord' screen and the third returns the user to the start of the application. Similar to the main menu, the sub menu will error until the correct input is given.
+The first option takes the user to the 'Search chords' screen. It asks the user to enter a chord with an input example given. Only strict entries of C/Cm/C#m style will be accepted. An error will be repeatedly displayed until the correct input is given. The notes of the input are displayed and its followed by the sub menu again.
+
+In the main menu, '2' is selected to enter the 'Search keys' feature. The user is prompted to input a single key. From here, this functions the same as above.
+
+In the main menu, '3' is selected to enter the 'Search chords' feature. This functions the same as above.
+
+## Application Control Flow
+
+![(./doc/cont_flow_diag.png)]
+
