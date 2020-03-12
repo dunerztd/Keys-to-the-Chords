@@ -213,11 +213,11 @@ end
 def sub_menu
   while true
     puts "\n"
-    puts "1. Select a Chord"
-    puts "2. Go Back"
-    puts "3. Main Menu"
+    puts "1. Select a Chord".colorize(:yellow)
+    puts "2. Go Back".colorize(:yellow)
+    puts "3. Main Menu".colorize(:yellow)
     puts "\n"
-    print "Enter Selection: "
+    print "Enter Selection: ".colorize(:light_blue)
     selection = gets.chomp.to_i
 
     case selection
