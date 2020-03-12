@@ -375,5 +375,7 @@ def search_keys
   puts "\n"
 end
 
+a = Artii::Base.new 
+puts a.asciify('#Keys to the Chords')
 
 main_menu()
