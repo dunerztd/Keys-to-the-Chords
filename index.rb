@@ -310,7 +310,7 @@ def search_keys_by_chord()
           puts "\n"
           print 'Incorrect Entry. Enter a valid chord (C/C#/C#m): '
           user_entry = gets.chomp
-          pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
+          pattern = Regexp.new(/[ABCDEFG][#mbdim]?[mdim]?/)
           puts "\n"
           return search_keys_by_chord()
         end
