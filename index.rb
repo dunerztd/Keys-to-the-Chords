@@ -255,14 +255,34 @@ def search_chords
 end
 
 def search_keys_by_chord()
-  print 'Enter the chord(s) for the keys you want to find (ie. C# D Bdim): ' # C# D Bdim
+  print 'Enter the chord(s) for the keys you want to find (ie. C/C#/C#m): ' # C# D Bdim
   chord_select = gets.chomp
 
   puts "\n"
 
   chord_select = chord_select.split(" ")
+  pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
   
-  search_keys_by_chord_print(chord_select)
+  loop_test = true
+
+    chord_select.each do |chord|
+      while loop_test == true
+        if pattern.match(chord)
+          loop_test = false
+        else
+          puts "\n"
+          print 'Incorrect Entry. Enter a valid chord (C/C#/C#m): '
+          user_entry = gets.chomp
+          pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
+          puts "\n"
+          return search_keys_by_chord()
+        end
+      end
+    end
+  
+    
+  
+search_keys_by_chord_print(chord_select)
 
   puts "\n"
   print "Which key would you like to view? "
@@ -340,6 +360,6 @@ end
 
 # search_keys_search()
 
-# main_menu()
+main_menu()
 
-search_keys_by_chord()
+# search_keys_by_chord()
