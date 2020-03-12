@@ -1,6 +1,7 @@
 require 'musique'
 require 'artii'
 require 'colorize'
+require 'tty-prompt'
 
 $major = [
   {
