@@ -39,7 +39,42 @@ In the main menu, '2' is selected to enter the 'Search keys' feature. The user i
 
 In the main menu, '3' is selected to enter the 'Search chords' feature. This functions the same as above.
 
-## Application Control Flow
+# Application Control Flow
 
 ![(./doc/cont_flow_diag.png)]
 
+# Implementation Plan
+
+### Listed by priority per feature
+
+- Search Keys By Chord
+  - Constructing .each/while/if statements
+  - Key search
+  - Displaying found key
+  - Check if array is empty
+  - Input error handling
+
+- Search Keys
+  - Search minor key array
+  - Display chord if found
+  - Search major key array
+  - Display chord if found
+  - Error handling if not found
+  - Input error handling
+
+- Search Chords
+  - Prompting user for input
+  - Implementing 'musique' gem
+  - Looping through array
+  - Displaying found chord
+  - Input error handling
+
+- Main Menu
+  - Designing layout
+  - Constructing while/case statements
+  - Implementing 'colorize' gem to style menu
+
+- Sub Menu
+  - implementing 'colorize' gem to style menu
+
+- Typing out major and minor key arrays
