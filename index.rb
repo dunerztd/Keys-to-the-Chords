@@ -375,8 +375,5 @@ def search_keys
   puts "\n"
 end
 
-# search_keys_search()
 
 main_menu()
-
-# search_keys_by_chord()
