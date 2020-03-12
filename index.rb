@@ -254,6 +254,39 @@ def search_chords
   end
 end
 
+
+def search_keys_by_chords_sub_display()
+  searching = true
+  while searching
+    puts "\n"
+    print "Which key would you like to view? "
+    puts "\n"
+    selection = gets.chomp
+
+    $major.each do |n|
+      if selection == n[:name]
+        searching = false
+        puts "\n"
+        print n[:chords]
+        puts "\n"
+        return
+      else
+        $minor.each do |n|
+          if selection == n[:name]
+            searching = false
+            puts "\n"
+            print n[:chords]
+            "\n"
+            return
+          end
+        end
+      end
+    end
+    puts "Incorrect Entry. Type in key exactly as it's displayed"
+    puts "\n"
+  end
+end
+
 def search_keys_by_chord()
   print 'Enter the chord(s) for the keys you want to find (ie. C/C#/C#m): ' # C# D Bdim
   chord_select = gets.chomp
@@ -261,6 +294,8 @@ def search_keys_by_chord()
   puts "\n"
 
   chord_select = chord_select.split(" ")
+
+  # Validating user input
   pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
   
   loop_test = true
@@ -280,34 +315,13 @@ def search_keys_by_chord()
       end
     end
   
-    
+  search_keys_by_chord_print(chord_select)
   
-search_keys_by_chord_print(chord_select)
-
-  puts "\n"
-  print "Which key would you like to view? "
-  puts "\n"
-
-  selection = gets.chomp
-  # change
-  # prints out all chords from list of found and then selected key
-  $major.each do |n|
-    if selection == n[:name]
-      puts "\n"
-      print n[:chords]
-    end
-  end
-
-  $minor.each do |n|
-    if selection == n[:name]
-      puts "\n"
-      print n[:chords]
-    end
-  end
-  puts "\n"
+  search_keys_by_chords_sub_display()
 
   sub_menu()
 end
+
 
 def search_keys_by_chord_print(chord_select)
 
