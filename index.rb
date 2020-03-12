@@ -294,9 +294,7 @@ end
 def search_keys_by_chord()
   print 'Enter the chord(s) for the keys you want to find (ie. C/C#/C#m): ' # C# D Bdim
   chord_select = gets.chomp
-
   puts "\n"
-
   chord_select = chord_select.split(" ")
 
   # Validating user input
