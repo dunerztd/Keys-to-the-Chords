@@ -207,6 +207,32 @@ def main_menu()
   end
 end
 
+def sub_menu
+  while true
+    puts "\n"
+    puts "1. Select a Chord"
+    puts "2. Go Back"
+    puts "3. Main Menu"
+    puts "\n"
+    print "Enter Selection: "
+    selection = gets.chomp.to_i
+
+    case selection
+    when 1
+      search_chords()
+    when 2
+      search_keys_by_chord()
+    when 3
+      main_menu()
+    else
+      "\n"
+      print "Incorrect selection. Please type 1, 2 or 3"
+      "\n"
+    end
+
+  end
+end
+
 def search_chords
   puts "\n"
   print 'What chord would you like displayed (only triads (C/Cm/C#m) supported)? '
@@ -287,32 +313,6 @@ def search_keys_by_chord_print(chord_select)
   end
 end
 
-def sub_menu
-  while true
-    puts "\n"
-    puts "1. Select a Chord"
-    puts "2. Go Back"
-    puts "3. Main Menu"
-    puts "\n"
-    print "Enter Selection: "
-    selection = gets.chomp.to_i
-
-    case selection
-    when 1
-      search_chords()
-    when 2
-      search_keys_by_chord()
-    when 3
-      main_menu()
-    else
-      "\n"
-      print "Incorrect selection. Please type 1, 2 or 3"
-      "\n"
-    end
-
-  end
-end
-
 def search_keys
   puts "\n"
   print "What key do you want to search for? "
@@ -338,4 +338,8 @@ def search_keys
   puts "\n"
 end
 
-main_menu()
+# search_keys_search()
+
+# main_menu()
+
+search_keys_by_chord()
