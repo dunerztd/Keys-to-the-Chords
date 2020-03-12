@@ -338,13 +338,4 @@ def search_keys
   puts "\n"
 end
 
-def search_chords_validation
-  # chord length can only be 1, 2 or 3 characters longs. length > 3 'error'
-  # first value A - G: can convert lowercase to uppercase
-  # if second character - only be either '#', 'b', 'm' (letters lowercase)
-  # if third character - will only be a lowercase 'm'
-
-  arr_1 = [A..G]
-end
-
 main_menu()
