@@ -1,4 +1,6 @@
 require 'musique'
+require 'artii'
+require 'colorize'
 
 $major = [
   {
