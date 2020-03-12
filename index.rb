@@ -187,7 +187,7 @@ def main_menu()
     puts "4. Exit".colorize(:yellow)
     puts "-" * 50
     puts "\n"
-    print "Enter Selection: "
+    print "Enter Selection: ".colorize(:light_blue)
     selection = gets.chomp.to_i
 
     case selection
