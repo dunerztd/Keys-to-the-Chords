@@ -239,7 +239,8 @@ end
 def search_chords
   puts "\n"
   print 'What chord would you like displayed (only triads (C/Cm/C#m) supported)? '
-  user_entry = gets.chomp.upcase
+  user_entry = gets.chomp
+  
   pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
   loop_test = true
 
