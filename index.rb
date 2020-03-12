@@ -377,6 +377,6 @@ def search_keys
 end
 
 a = Artii::Base.new 
-puts a.asciify('#Keys to the Chords')
+puts a.asciify('#Keys to the Chords').colorize(:red)
 
 main_menu()
