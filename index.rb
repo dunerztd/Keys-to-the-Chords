@@ -298,7 +298,7 @@ def search_keys_by_chord()
   chord_select = chord_select.split(" ")
 
   # Validating user input
-  pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
+  pattern = Regexp.new(/[ABCDEFG][#mbdim]?[mdim]?/)
   
   loop_test = true
 
