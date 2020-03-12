@@ -181,10 +181,10 @@ def main_menu()
   while true
     puts "\n"
     puts "-" * 50
-    puts "1. Search keys by chords"
-    puts "2. Search keys"
-    puts "3. Search chords"
-    puts "4. Exit"
+    puts "1. Search keys by chords".colorize(:yellow)
+    puts "2. Search keys".colorize(:yellow)
+    puts "3. Search chords".colorize(:yellow)
+    puts "4. Exit".colorize(:yellow)
     puts "-" * 50
     puts "\n"
     print "Enter Selection: "
