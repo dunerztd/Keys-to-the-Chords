@@ -236,12 +236,13 @@ end
 def search_chords
   puts "\n"
   print 'What chord would you like displayed (only triads (C/Cm/C#m) supported)? '
-  user_entry = gets.chomp
+  user_entry = gets.chomp.upcase
   pattern = Regexp.new(/[ABCDEFG][#mb]?[m]?/)
   loop_test = true
 
   while loop_test == true
     if pattern.match(user_entry)
+      puts "\n"
       p Music::Chord.new(user_entry).notes.map(&:name)
       loop_test = false
     else
@@ -276,7 +277,7 @@ def search_keys_by_chords_sub_display()
             searching = false
             puts "\n"
             print n[:chords]
-            "\n"
+            puts "\n"
             return
           end
         end
