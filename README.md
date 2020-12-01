@@ -1,8 +1,12 @@
+# Keys to the Chords
+
 # Source Control Repository
 
 https://github.com/dunerztd/Chords_and_Keys
 
--- screenshot needed ---
+(App may have a different name to what's on GitHub)
+
+![screen shot of git depository](./docs/git_scrnshot.png)
 
 # Software Development Plan
 
@@ -39,42 +43,53 @@ In the main menu, '2' is selected to enter the 'Search keys' feature. The user i
 
 In the main menu, '3' is selected to enter the 'Search chords' feature. This functions the same as above.
 
-# Application Control Flow
+## Application Control Flow
 
-![(./doc/cont_flow_diag.png)]
+![control flow diagram](./docs/cont_flow_diag.png)
 
-# Implementation Plan
+## Implementation Plan
 
 ### Listed by priority per feature
 
 - Search Keys By Chord
-  - Constructing .each/while/if statements
-  - Key search
-  - Displaying found key
-  - Check if array is empty
-  - Input error handling
+  - Constructing .each/while/if statements (1 hour)
+  - Key search (1 hour)
+  - Displaying found key (20 mins)
+  - Check if array is empty (5 mins)
+  - Input error handling (2 hours)
 
 - Search Keys
-  - Search minor key array
-  - Display chord if found
-  - Search major key array
-  - Display chord if found
-  - Error handling if not found
-  - Input error handling
+  - Search minor key array (20 mins)
+  - Display chord if found (20 mins)
+  - Search major key array (20 mins)
+  - Display chord if found (20 mins)
+  - Error handling if not found (1 hour)
+  - Input error handling (1 hour)
 
 - Search Chords
-  - Prompting user for input
-  - Implementing 'musique' gem
-  - Looping through array
-  - Displaying found chord
-  - Input error handling
+  - Prompting user for input (5 mins)
+  - Implementing 'musique' gem (30 mins)
+  - Looping through array (30 mins)
+  - Displaying found chord (20 mins)
+  - Input error handling (1 hour)
 
 - Main Menu
-  - Designing layout
-  - Constructing while/case statements
-  - Implementing 'colorize' gem to style menu
+  - Designing layout (30 mins)
+  - Constructing while/case statements (20 mins)
+  - Implementing 'colorize' gem to style menu (20 mins)
 
 - Sub Menu
-  - implementing 'colorize' gem to style menu
+  - implementing 'colorize' gem to style menu (5 mins)
 
-- Typing out major and minor key arrays
+- Typing out major and minor key arrays (3 hours)
+
+![Screen shot of trello board](./docs/trello_scrnshot.png)
+
+## Help Documentation
+
+### This terminal application requires the following gems to operate:
+
+- colorize (0.8.1)
+- artii (2.1.2)
+- musique (0.0.2)
+- tty-prompt (0.21.0)
