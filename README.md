@@ -45,7 +45,7 @@ In the main menu, '3' is selected to enter the 'Search chords' feature. This fun
 
 ## Application Control Flow
 
-![control flow diagram](./docs/cont_flow_diag.png)
+![control flow diagram](./docs/Cont_flow_diag.png)
 
 ## Implementation Plan
 
